@@ -1,4 +1,6 @@
-﻿namespace WebApplication1.Endpoints;
+﻿using WebApplication1.Models;
+
+namespace WebApplication1.Endpoints;
 
 public static class AnimalEndpoints
 {
@@ -6,6 +8,7 @@ public static class AnimalEndpoints
     {
         app.MapGet("/animals", () =>
         {
+            var animals = StaticData.Animals;
             return Results.Ok();
         });
 
