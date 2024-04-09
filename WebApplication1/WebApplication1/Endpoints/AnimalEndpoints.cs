@@ -14,12 +14,13 @@ public static class AnimalEndpoints
 
         app.MapGet("/animals/{id}", (int id) =>
         {
+            var animals = StaticData.Animals;
             return Results.Ok(id);
         });
 
-        app.MapPost("/animals", () =>
+        app.MapPost("/animals", (Animal animal) =>
         {
-            return Results.Created(); 
+            return Results.Created("", animal); 
         });
     }
 }

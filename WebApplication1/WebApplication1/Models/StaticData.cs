@@ -6,6 +6,6 @@ public class StaticData
     {
      new Animal(),
      new Animal(),
-     new Animal()
+     new Animal(),
     };
 }
